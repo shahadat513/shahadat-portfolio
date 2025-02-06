@@ -3,6 +3,8 @@ import image from "../../assets/cb17d4ce-7cf7-4c41-a157-3bf712196a45.png";
 import { BackgroundBeamsWithCollision } from "../../utils/source";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import resume from"../../../public/Shahadat-Resume (1).pdf"
+
 
 export function BackgroundBeamsWithCollisionDemo() {
 
@@ -32,31 +34,31 @@ export function BackgroundBeamsWithCollisionDemo() {
                     <p className="font-bold text-2xl md:text-3xl bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
                         MERN Stack Developer
                     </p>
-                    <p className="text-base md:text-lg lg:text-xl text-white pb-5 max-w-md">
+                    <p className="text-black dark:text-white pb-5 max-w-md">
                         With 2 years of experience, I specialize in developing dynamic, interactive, and scalable digital
                         experiences with the MERN stack, combining innovation with functionality to cater to a
                         technology-forward world.
                     </p>
                     <div className="flex justify-center md:justify-start gap-4 py-4">
                         <Link to="https://github.com/shahadat513">
-                            <FaGithub className="text-white h-8 w-8 md:h-10 md:w-10" />
+                            <FaGithub className="text-black dark:text-white h-8 w-8 md:h-10 md:w-10" />
                         </Link>
-                        <Link to="">
-                            <FaLinkedin className="text-white h-8 w-8 md:h-10 md:w-10" />
+                        <Link to="https://www.linkedin.com/in/md-shahadat-hossain-b917a3275/">
+                            <FaLinkedin className="text-black dark:text-white h-8 w-8 md:h-10 md:w-10" />
                         </Link>
                         <Link to="https://www.facebook.com/shahadathossen513">
-                            <FaFacebook className="text-white h-8 w-8 md:h-10 md:w-10" />
+                            <FaFacebook className="text-black dark:text-white h-8 w-8 md:h-10 md:w-10" />
                         </Link>
                         <Link to="https://www.instagram.com/shahadatsohl/">
-                            <FaInstagram className="text-white h-8 w-8 md:h-10 md:w-10" />
+                            <FaInstagram className="text-black dark:text-white h-8 w-8 md:h-10 md:w-10" />
                         </Link>
                     </div>
                     {/* Download CV Button */}
                     <div className="flex gap-3">
                         <a
-                            href="/CV-of-Md.-Shahadat-Hossain-Shohel.pdf" // Ensure your file is in the 'public' folder, and the path is relative to the public root.
+                            href={resume}
                             className="btn btn-primary px-6 py-2 mt-4 text-base md:text-lg"
-                            download="Shahadat_Hossain_CV.pdf"
+                            download="Resume_Shahadat_Hossain.pdf"
                         >
                             Download CV <FaDownload className="inline ml-2" />
                         </a>

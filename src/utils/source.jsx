@@ -1,7 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+/* eslint-disable react/prop-types */
+import  { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../utils/cn"; // Adjust the import path for your project structure
 
+// eslint-disable-next-line react/prop-types
 export const BackgroundBeamsWithCollision = ({ children, className }) => {
   const containerRef = useRef(null);
   const parentRef = useRef(null);
@@ -50,6 +52,7 @@ export const BackgroundBeamsWithCollision = ({ children, className }) => {
   );
 };
 
+// eslint-disable-next-line react/prop-types
 const CollisionMechanism = ({ parentRef, containerRef, beamOptions = {} }) => {
   const beamRef = useRef(null);
   const [collision, setCollision] = useState({ detected: false, coordinates: null });
@@ -58,6 +61,7 @@ const CollisionMechanism = ({ parentRef, containerRef, beamOptions = {} }) => {
 
   useEffect(() => {
     const checkCollision = () => {
+      // eslint-disable-next-line react/prop-types
       if (beamRef.current && containerRef.current && parentRef.current && !cycleCollisionDetected) {
         const beamRect = beamRef.current.getBoundingClientRect();
         const containerRect = containerRef.current.getBoundingClientRect();

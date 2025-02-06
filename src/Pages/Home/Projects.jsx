@@ -1,50 +1,47 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
+    const navigate = useNavigate();
+    
     const projects = [
         {
+            title: "Core Team",
+            description: "Core Team is a workforce management platform designed to streamline employee administration, payroll processing, and HR operations. It enables admins, HR personnel, and employees to efficiently manage tasks, view payment history, and track payroll records with an intuitive dashboard. Built with modern web technologies, it ensures seamless data handling, secure transactions, and a user-friendly experience.",
+            image: "https://i.ibb.co.com/d4V1K8BS/image.png",
+            client: "https://github.com/shahadat513/Core_Team-Client",
+            live: "https://core-team-eb32c.web.app/",
+            techStack: "React, Tailwind CSS, Firebase, MongoDB, Express.js.",
+            challenges: "Managing role-based access, ensuring secure payroll transactions, handling real-time data updates, and implementing dynamic charts for salary trends.",
+            improvements: "Optimize API calls, enhance UI responsiveness, improve error handling, implement role-based dashboards, and add automated payroll notifications."
+        },
+        {
             title: "Fodis",
-            description:
-                "Fodis is a dynamic e-commerce website that allows users to place orders for products, while admins have the capability to manage and update product information. The website leverages modern web development technologies such as JavaScript, Vite for a fast build process, Tailwind CSS for rapid styling, and DaisyUI for pre-designed UI components to create a seamless and responsive user experience. Through this combination, Fodis provides a user-friendly platform for both customers to browse and purchase products, and for administrators to efficiently manage product listings and updates.",
+            description: "Fodis is a dynamic e-commerce website that allows users to place orders for products, while admins have the capability to manage and update product information.",
             image: "https://i.ibb.co.com/j4br4ht/Fodis.jpg",
             client: "https://github.com/shahadat513/fodis-client",
-            server: "https://github.com/shahadat513/fodis-server",
             live: "https://fodis-client.web.app/",
+            techStack: "JavaScript, Vite, Tailwind CSS, DaisyUI, Firebase",
+            challenges: "Implementing secure authentication and managing real-time product updates.",
+            improvements: "Adding AI-powered recommendations and enhancing UI responsiveness."
         },
         {
             title: "Sport-dox",
-            description:
-                "Sport-dox is an online sports equipment shop designed to provide a seamless shopping experience for sports enthusiasts. The website features a user-friendly interface where customers can easily browse and purchase a variety of sports gear and equipment. Admins have the ability to manage and update product listings efficiently, ensuring that the latest sports equipment is always available. Built with modern web technologies like JavaScript, Vite for optimized performance, Tailwind CSS for responsive design, and DaisyUI for ready-to-use UI components, Sport-dox delivers a fast, visually appealing, and interactive experience for both users and administrators.",
+            description: "Sport-dox is an online sports equipment shop designed to provide a seamless shopping experience for sports enthusiasts.",
             image: "https://i.ibb.co.com/V2QR5Jk/Assignment-10.jpg",
-            client: "https://github.com/shahadat513/sportdox-client",
-            server: "https://github.com/shahadat513/sportdox-server",
+            client: "https://github.com/shahadat513/Sport-Dox-Client",
             live: "https://assignment-10-5f7fc.web.app/",
-        },
-        {
-            title: "Career Hub",
-            description:
-                "Career Hub is a professional career consultancy dedicated to guiding individuals in their career paths. Whether you're seeking career advice, job placement, or professional development, Career Hub offers personalized support to help clients achieve their career goals. With a focus on providing tailored solutions, the consultancy combines expertise in career planning with modern tools to empower individuals to make informed career decisions.",
-            image: "https://i.ibb.co.com/9TkSCxb/Assignment-9.jpg",
-            client: "https://github.com/shahadat513/career-hub",
-            server: "https://github.com/shahadat513/career-hub",
-            live: "https://a9-b10-career.netlify.app/",
-        },
-        {
-            title: "Donate Bangladesh",
-            description:
-                "A portfolio web application showcasing professional projects and achievements with a modern design. Built with React, Tailwind CSS, and Firebase.",
-            image: "https://i.ibb.co.com/N6H4xbH/Donate.jpg",
-            client: "#",
-            server: "#",
-            live: "https://shahadat513.github.io/Assignment-5/",
-        },
+            techStack: "JavaScript, Vite, Tailwind CSS, DaisyUI, Firebase",
+            challenges: "Ensuring smooth checkout flow and maintaining an optimized product search.",
+            improvements: "Adding multi-currency support and expanding product categories."
+        }
+        
     ];
 
     return (
         <div id="projects" className="bg-black py-12 px-4 sm:px-6 lg:px-8">
             <div className="text-white pt-10 pb-20">
                 <h1 className="text-6xl font-semibold text-center pb-4">
-                    My{" "}
+                    My {" "}
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500'>
                         Projects
                     </span>
@@ -56,7 +53,7 @@ export default function Projects() {
                     <div
                         key={index}
                         className="group relative bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl"
-                        style={{ height: "420px" }}
+                        style={{ height: "450px" }}
                     >
                         <div
                             className="overflow-hidden"
@@ -68,12 +65,12 @@ export default function Projects() {
                                 className="w-full h-full object-cover group-hover:rotate-3 group-hover:scale-110 transition-transform duration-500"
                             />
                         </div>
-                        <div className="p-4 flex flex-col justify-between" style={{ height: "220px" }}>
+                        <div className="p-4 flex flex-col justify-between" style={{ height: "250px" }}>
                             <div>
                                 <h3 className="text-xl font-semibold text-white">
                                     {project.title}
                                 </h3>
-                                <p className="text-gray-400 text-sm mt-2 line-clamp-4">
+                                <p className="text-gray-400 text-sm mt-2 line-clamp-3">
                                     {project.description}
                                 </p>
                             </div>
@@ -87,14 +84,6 @@ export default function Projects() {
                                     Client
                                 </a>
                                 <a
-                                    href={project.server}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-gray-700 hover:bg-green-600 text-white px-3 py-1 rounded transition"
-                                >
-                                    Server
-                                </a>
-                                <a
                                     href={project.live}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -102,6 +91,12 @@ export default function Projects() {
                                 >
                                     Live
                                 </a>
+                                <button
+                                    onClick={() => navigate(`/projects/${index}`)}
+                                    className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded transition"
+                                >
+                                    View More
+                                </button>
                             </div>
                         </div>
                     </div>

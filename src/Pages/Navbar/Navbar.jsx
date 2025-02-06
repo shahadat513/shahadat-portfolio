@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unknown-property */
 import { FaDownload } from "react-icons/fa";
 import { useState } from "react";
+import resume from"../../../public/Shahadat-Resume (1).pdf"
 
 const Navbar = () => {
     const [active, setActive] = useState("Home");
@@ -92,9 +94,9 @@ const Navbar = () => {
             <div className="navbar-end">
                 {/* CV Download Button */}
                 <a
-                        href="/public/CV- of Md. Shahadat Hossain Shohel .pdf" // Ensure your file is in the 'public' folder, and the path is relative to the public root.
+                        href={resume}
                         className="btn btn-primary"
-                        download="/public/CV- of Md. Shahadat Hossain Shohel .pdf" // This specifies the default name for the downloaded file.
+                        download="Resume_Shahadat_Hossain.pdf"
                     >
                         Download CV<FaDownload />
                     </a>

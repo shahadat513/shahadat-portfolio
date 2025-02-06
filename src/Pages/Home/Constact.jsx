@@ -1,4 +1,3 @@
-
 const Contact = () => {
     return (
         <div id="contact" className="bg-gray-900 py-10">
@@ -52,11 +51,26 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Message Section */}
-                <div className="w-full md:w-1/2 text-center md:text-left">
-                    <h1 className="mt-10 md:mt-20 text-3xl md:text-5xl text-white">
+                {/* Message Section & Map */}
+                <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
+                    <h1 className="mt-4 mb-4 md:mt-20 text-3xl md:text-5xl text-white">
                         Let`s connect with each other and discover something new
                     </h1>
+                    <div className="mt-6 w-11/12 h-64 md:h-80">
+                        <iframe
+                            title="Rangpur Location"
+                            className="w-full h-full rounded-lg shadow-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.2225399794375!2d89.25445557499732!3d25.74389247743666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e334c6f36dcb91%3A0x7a5f4ff0b1d36eb3!2sRangpur%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <div className="mt-6 text-white text-lg">
+                        <p><strong>Phone:</strong> +880 1956-624479</p>
+                        <p><strong>Email:</strong> shahadatsohel513@gmail.com</p>
+                        <p><strong>Address:</strong> Rangpur, Bangladesh</p>
+                    </div>
                 </div>
             </div>
         </div>
